@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="./fonts/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="./libs/jquery-ui/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title>Overview &middot; Dashboard theme &middot; Official Bootstrap Themes</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <aside class="col-3 sidebar">
+          <h1 class="logo"><a class="logo__link" href="#"><span><i class="logo__icon fas fa-leaf"></i></span></a></h1>
+          <button class="sidebar__toggle-button js-sidebar__toggle-button"><span> </span></button>
+          <div class="sidebar__collapse">
+            <form class="search" action="#">
+              <input class="search__input" type="text" placeholder="Search..."/>
+              <button class="search__btn" type="submit"><i class="search__btn-icon fas fa-search"></i></button>
+            </form>
+            <nav class="navbar">
+              <div class="dashboards">
+                <h3 class="dashboards__title">dashboard</h3>
+                <ul class="dashboards__list">
+                  <li class="dashboards__item"><a class="dashboards__link active" href="#">Overview</a></li>
+                  <li class="dashboards__item"><a class="dashboards__link" href="#">Order history</a></li>
+                  <li class="dashboards__item"><a class="dashboards__link" href="#">Fluid layout</a></li>
+                  <li class="dashboards__item"><a class="dashboards__link" href="#">Icon nav</a></li>
+                </ul>
+              </div>
+              <div class="more-document">
+                <h3 class="more-document__title">More</h3>
+                <ul class="more-document__list">
+                  <li class="dashboards__item"><a class="dashboards__link" href="#">Toolkit docs</a></li>
+                  <li class="dashboards__item"><a class="dashboards__link" href="#">Bootstrap docs</a></li>
+                  <li class="dashboards__item"><a class="dashboards__link" href="#">Light UI</a></li>
+                  <li class="dashboards__item"><a class="dashboards__link" href="#">Example modal</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </aside>
+        <div class="col-9 main-content">
+          <section class="overview">
+            <div class="overview__header">
+              <div class="overview__title">
+                <h6 class="overview__sub-title">Dashboards</h6>
+                <h2 class="overview__main-title">Overview</h2>
+              </div>
+              <div class="datetime-picker"><i class="datetime-picker__icon fas fa-calendar-week"></i>
+                <input class="datetime-picker__input js-datetime-picker__input" type="text" placeholder="01/01/15 - 01/08/15"/>
+              </div>
+            </div>
+            <div class="overview__charts">
+              <div class="row">
+                <div class="col-4 doughnut">
+                  <div class="doughnut__chart-inner">
+                    <canvas class="doughnut__chart js-doughnut-canvas" data-set="[{&quot;data&quot;:[100,260],&quot;label&quot;:[&quot;Returning&quot;,&quot;New&quot;]}]" width="150" height="150"></canvas>
+                  </div>
+                  <div class="doughnut__content">Traffic</div>
+                  <h3 class="doughnut__title">New vs Returning</h3>
+                </div>
+                <div class="col-4 doughnut">
+                  <div class="doughnut__chart-inner">
+                    <canvas class="doughnut__chart js-doughnut-canvas" data-set="[{&quot;data&quot;:[230,130],&quot;label&quot;:[&quot;Returning&quot;,&quot;New&quot;]}]" width="150" height="150"></canvas>
+                  </div>
+                  <div class="doughnut__content">Revenue</div>
+                  <h3 class="doughnut__title">New vs Recurring</h3>
+                </div>
+                <div class="col-4 doughnut">
+                  <div class="doughnut__chart-inner">
+                    <canvas class="doughnut__chart js-doughnut-canvas" data-set="[{&quot;data&quot;:[230,30],&quot;label&quot;:[&quot;Returning&quot;,&quot;New&quot;]}]" width="150" height="150"></canvas>
+                  </div>
+                  <div class="doughnut__content">Traffic</div>
+                  <h3 class="doughnut__title">Direct vs Referrals</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="quick-stats">
+            <div class="quick-stats__header">
+              <h3 class="quick-stats__title">quick-stats</h3>
+            </div>
+            <div class="quick-stats__charts">
+              <div class="line-chart line-chart--green">
+                <div class="line-chart__content">
+                  <h3 class="line-chart__title">page views</h3>
+                  <div class="line-chart__statistical"><span class="line-chart__count">1,293<small class="line-chart__percent line-chart__percent--increase">5%</small></span></div>
+                </div>
+                <div class="line-chart__inner"> 
+                  <canvas class="line-chart__chart js-line-chart-canvas" data-set="[{&quot;data&quot;:[28,68,41,43,96,45,100],&quot;label&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;]}]" width="336" height="83"></canvas>
+                </div>
+              </div>
+              <div class="line-chart line-chart--red">
+                <div class="line-chart__content">
+                  <h3 class="line-chart__title">downloads</h3>
+                  <div class="line-chart__statistical"><span class="line-chart__count">758<small class="line-chart__percent line-chart__percent--decrease">1.3%</small></span></div>
+                </div>
+                <div class="line-chart__inner"> 
+                  <canvas class="line-chart__chart js-line-chart-canvas" data-set="[{&quot;data&quot;:[4,34,64,27,96,50,80],&quot;label&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;]}]" width="336" height="83"></canvas>
+                </div>
+              </div>
+              <div class="line-chart line-chart--violet">
+                <div class="line-chart__content">
+                  <h3 class="line-chart__title">sign-ups</h3>
+                  <div class="line-chart__statistical"><span class="line-chart__count">1,293<small class="line-chart__percent line-chart__percent--increase">6.75%</small></span></div>
+                </div>
+                <div class="line-chart__inner"> 
+                  <canvas class="line-chart__chart js-line-chart-canvas" data-set="[{&quot;data&quot;:[12,38,32,60,36,54,68],&quot;label&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;]}]" width="336" height="83"></canvas>
+                </div>
+              </div>
+              <div class="line-chart line-chart--yellow">
+                <div class="line-chart__content">
+                  <h3 class="line-chart__title">Downloads</h3>
+                  <div class="line-chart__statistical"><span class="line-chart__count">758<small class="line-chart__percent line-chart__percent--decrease">1.3%</small></span></div>
+                </div>
+                <div class="line-chart__inner"> 
+                  <canvas class="line-chart__chart js-line-chart-canvas" data-set="[{&quot;data&quot;:[43,48,52,58,50,95,100],&quot;label&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;]}]" width="336" height="83"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="statistical">
+            <div class="statistical__table statistical__table--country">
+              <ul class="statistical__list">
+                <li class="statistical__item">
+                  <h3 class="statistical__title">Countries</h3>
+                </li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">United States<span class="statistical__country" style="width :62.4%"></span><span class="statistical__percent">62.4%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">India<span class="statistical__country" style="width :15.0%"></span><span class="statistical__percent">15.0%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">United Kingdom<span class="statistical__country" style="width :5%"></span><span class="statistical__percent">5%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">Canada<span class="statistical__country" style="width :5%"></span><span class="statistical__percent">5%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">Russia<span class="statistical__country" style="width :4.5%"></span><span class="statistical__percent">4.5%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">Mexico<span class="statistical__country" style="width :2.3%"></span><span class="statistical__percent">2.3%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">Spain<span class="statistical__country" style="width :1.7%"></span><span class="statistical__percent">1.7%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">France<span class="statistical__country" style="width :1.5%"></span><span class="statistical__percent">1.5%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">South Africa<span class="statistical__country" style="width :1.4%"></span><span class="statistical__percent">1.4%</span></a></li>
+                <li class="statistical__item"><a class="statistical__link statistical__link--country" href="javascript:void(0)">Japan<span class="statistical__country" style="width :1.2%"></span><span class="statistical__percent">1.2%</span></a></li>
+              </ul>
+              <div class="statistical__bottom-link"><a class="statistical__all-link">All Countries</a></div>
+            </div>
+            <div class="statistical__table">
+              <ul class="statistical__list">
+                <li class="statistical__item">
+                  <h3 class="statistical__title">Most visited pages</h3>
+                </li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/ (Logged out)</span><span>3,929,481</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/ (Logged in)</span><span>1,143,393</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/tour</span><span>938,287</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/features/something</span><span>749,393</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/features/another-thing</span><span>695,912</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/users/username</span><span>501,938</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/page-title</span><span>392,842</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/some/page-slug</span><span>298,183</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/another/directory/and/page-title</span><span>193,129</span></a></li>
+                <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>/one-more/page/directory/file-name</span><span>93,382</span></a></li>
+              </ul>
+              <div class="statistical__bottom-link"><a class="statistical__all-link">View all pages</a></div>
+            </div>
+          </div>
+          <div class="statistical__table--full">
+            <ul class="statistical__list">
+              <li class="statistical__item">
+                <h3 class="statistical__title">Devices and resolutions</h3>
+              </li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Desktop (1920x1080)</span><span>3,929,481</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Desktop (1366x768)</span><span>1,143,393</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Desktop (1440x900)</span><span>938,287</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Desktop (1280x800)</span><span>749,393</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Tablet (1024x768)</span><span>695,912</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Tablet (768x1024)</span><span>501,938</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Phone (320x480)</span><span>392,842</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Phone (720x450)</span><span>298,183</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Desktop (2560x1080)</span><span>193,129</span></a></li>
+              <li class="statistical__item"><a class="statistical__link" href="javascript:void(0)"><span>Desktop (2560x1600)</span><span>93,382</span></a></li>
+            </ul>
+            <div class="statistical__bottom-link"><a class="statistical__all-link">View all devices</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="libs/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="libs/jquery-ui/jquery-ui.min.js"></script>
+  <script src="js/main.js"></script>
+</html>

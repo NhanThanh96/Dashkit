@@ -1,0 +1,24 @@
+{
+  "name": "ProjectBase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NhanThanh96/BootstrapThemeEd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NhanThanh96/BootstrapThemeEd/issues"
+  },
+  "homepage": "https://github.com/NhanThanh96/BootstrapThemeEd#readme"
+}
