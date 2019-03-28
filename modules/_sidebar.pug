@@ -1,16 +1,82 @@
 mixin sidebar()
-  nav.navbar.navbar-vertical
+  nav.navbar.navbar__vertical.navbar-light
     .container-fluid
-    a.navbar-brand
-      img.navbar-brand__img(src="../images/logo.svg")
-    button.navbar-toggler(
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    )
-      span.navbar-toggler-icon
-    +mainMenu({mainMenu : mainMenus})
-    +mainMenu({mainMenu : documentationMenu})
+      .logo
+        a.navbar-brand
+          img.navbar-brand__img(src="../images/logo.svg")
+      button.navbar-toggler.d-md-none(
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      )
+        span.navbar-toggler-icon
+      .user.d-md-none
+        .dropdown
+          a#sidebarAvatar.dropdown-toggle(
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          )
+            .user__avatar.user__avatar--sm
+              img.user__img
+          .dropdown-menu.dropdown-menu-right(
+            aria-labelledby="sidebarAvatar"
+          )
+            each val, index in ["Profile", "Settings", "Logout"]
+              a.dropdown-item(
+                href= "#"
+              )= val
+      //- navbar collapse
+      .navbar-collapse#navbarContent
+        +menu({mainMenu : mainMenus})
+        hr.navbar-devider.my-2
+        h6.navbar__heading Documentation
+        +menu({mainMenu : documentationMenu})
+        .mt-auto
+      .navbar__action
+        .customize-action
+            a.btn.btn-block.btn-primary(
+              data-toggle="modal"
+              href="#customizeModal"
+            )
+              i.fe.fe-sliders
+              | Customize
+        .user-action
+          .notify-action
+            a.btn.btn-block(
+              data-toggle="modal"
+              href="#notifyModal"
+            )
+              span
+                i.fe.fe-bell
+          .user
+            .dropup
+              a#sidebarAvatarUp.dropdown-toggle(
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              )
+                .user__avatar.user__avatar--sm.user__avatar--online
+                  img.user__img(
+                    src= "../images/avatar-1.jpg"
+                  )
+              .dropdown-menu.dropdown-menu-right(
+                aria-labelledby="sidebarAvatarUp"
+              )
+                each val, index in ["Profile", "Settings", "Logout"]
+                  a.dropdown-item(
+                    href= "#"
+                  )= val
+          .search-action
+            a.btn.btn-block(
+              data-toggle="modal"
+              data-target="#sidebarModalSearch"
+            )
+              span
+                i.fe.fe-search
+            

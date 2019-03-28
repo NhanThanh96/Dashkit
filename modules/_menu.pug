@@ -121,6 +121,81 @@
           url : "#"
         }
       ]
+    },
+    {
+      name : "Authentication",
+      url : "sidebarAuth",
+      icon : "fe fe-user",
+      secondLevelMenu : [
+        {
+          name  : "Sign in",
+          url : "sidebarSignIn",
+          thirdLevelMenu  : [
+            {
+              name  : "Cover",
+              url : "#"
+            },
+            {
+              name  : "Illustration",
+              url : "#"
+            },
+            {
+              name  : "Basic",
+              url : "#"
+            }
+          ]
+        },
+        {
+          name  : "Sign up",
+          url : "sidebarSignUp",
+          thirdLevelMenu  : [
+            {
+              name  : "Cover",
+              url : "#"
+            },
+            {
+              name  : "Illustration",
+              url : "#"
+            },
+            {
+              name  : "Basic",
+              url : "#"
+            }
+          ]
+        },
+        {
+          name  : "Password reset",
+          url : "sidebarPassword",
+          thirdLevelMenu  : [
+            {
+              name  : "Cover",
+              url : "#"
+            },
+            {
+              name  : "Illustration",
+              url : "#"
+            },
+            {
+              name  : "Basic",
+              url : "#"
+            }
+          ]
+        },
+        {
+          name  : "Error",
+          url : "sidebarError",
+          thirdLevelMenu  : [
+            {
+              name  : "Illustration",
+              url : "#"
+            },
+            {
+              name  : "Basic",
+              url : "#"
+            }
+          ]
+        },
+      ]
     }
   ]
 
@@ -253,7 +328,7 @@
     }
   ]
 
-mixin mainMenu({mainMenu})
+mixin menu({mainMenu})
   ul.navbar-nav
     each val in mainMenu
       li.nav-item
@@ -262,13 +337,15 @@ mixin mainMenu({mainMenu})
             href= "#" + val.url
             data-toggle="collapse"
             role="button"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls= val.url
-          )= val.name
+            class= val.secondLevelMenu ? "submenu" : ""
+          )
             if val.icon
               i(
                 class= val.icon
               )
+              |#{val.name}
           .collapse(
             class= val.isShow ? "show" : ""
             id= val.url
@@ -283,6 +360,7 @@ mixin mainMenu({mainMenu})
                       role="button"
                       aria-expanded="false"
                       aria-controls= secondLevel.url
+                      class= secondLevel.thirdLevelMenu ? "submenu" : ""
                     )= secondLevel.name
                     .collapse(
                       id= secondLevel.url
@@ -305,13 +383,13 @@ mixin mainMenu({mainMenu})
         else
           a.nav-link(
             href= "#" + val.url
-          )= val.name
+          )
             if val.icon
               i(
                 class= val.icon
               )
+              |#{val.name}
             if val.badge
                         span.badge(
                           class= val.badge.badgeClass
                         )= val.badge.content
-

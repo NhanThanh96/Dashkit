@@ -3,7 +3,6 @@ extends ./modules/_core
 block head
   +head()
 block body
-  .container
-    .row
-      +sidebar()
-      +content()
+  +modal()
+  +sidebar()
+  +content()

@@ -3,11 +3,15 @@
 
 @import 'base/_color';
 @import 'base/_font';
+@import 'base/_icon';
 @import 'base/_reset';
 @import 'base/_global';
 @import 'base/_typography';
 
+@import 'bootstrap-override/_override-bootstrap';
+
 @import 'component/_sidebar';
 @import 'component/_button';
 @import 'component/_content';
+@import 'component/_modal';
 @import 'component/_responsive';
